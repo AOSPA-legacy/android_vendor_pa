@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_i9300,$(TARGET_PRODUCT))
+ifeq (pa_spyder,$(TARGET_PRODUCT))
 
 # Define PA bootanimation size
 PARANOID_BOOTANIMATION_NAME := HDPI
@@ -31,7 +31,7 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/i9300/full_i9300.mk)
+$(call inherit-product, device/samsung/i9300/full_spyder.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := pa_spyder
