@@ -16,4 +16,6 @@ add_lunch_combo pa_ls980-userdebug
 add_lunch_combo pa_m7ul-userdebug
 add_lunch_combo pa_n7000-userdebug
 add_lunch_combo pa_n7100-userdebug
+add_lunch-combo pa_spyder-userdebug
 add_lunch_combo pa_vs980-userdebug
+add_lunch_combo pa_umts_spyder-userdebug
