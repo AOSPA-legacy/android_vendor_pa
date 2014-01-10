@@ -31,7 +31,7 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/sony/togari/full_anzu.mk)
+$(call inherit-product, device/semc/anzu/full_anzu.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := pa_anzu
