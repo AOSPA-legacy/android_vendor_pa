@@ -35,9 +35,9 @@ $(call inherit-product, device/amazon/jem/full_jem.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := pa_jem
-PRODUCT_BRAND := amazon
+PRODUCT_BRAND := google
 PRODUCT_MODEL := Kindle Fire HD 8.9
-PRODUCT_MANUFACTURER := amazon
+PRODUCT_MANUFACTURER := android
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=full_jem TARGET_DEVICE=jem BUILD_FINGERPRINT="Android/tate/tate:4.0.3/IML74K/7.2.2_user_2218220:user/release-keys" PRIVATE_BUILD_DESC="tate-user 4.0.3 IML74K 7.2.2_user_2218220 release-keys"
 
 # Update local_manifest.xml
