@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_jfltetmo,$(TARGET_PRODUCT))
+ifeq (pa_moto_msm8960dt,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
@@ -29,14 +29,18 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/jfltetmo/full_jfltetmo.mk)
+$(call inherit-product, device/motorola/moto_msm8960dt/full_moto_msm8960dt.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_jfltetmo
-PRODUCT_DEVICE := jfltetmo
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SGH-M919
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jfltetmo TARGET_DEVICE=jfltetmo BUILD_FINGERPRINT="samsung/jfltetmo/jfltetmo:4.3/JSS15J/M919UVUEMK2:user/release-keys" PRIVATE_BUILD_DESC="jfltetmo-user 4.3 JSS15J M919UVUEMK2 release-keys"
+PRODUCT_DEVICE := moto_msm8960dt
+PRODUCT_NAME := pa_moto_msm8960dt
+PRODUCT_BRAND := motorola
+PRODUCT_MODEL := MOTOROLA MSM8960DT
+PRODUCT_MANUFACTURER := motorola
+
+# Set build fingerprint / ID / Product Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=motorola \
+    TARGET_DEVICE=moto_msm8960dt
 
 endif

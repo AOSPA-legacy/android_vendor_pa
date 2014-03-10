@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +13,13 @@
 # limitations under the License.
 
 # Check for target product
+ifeq (pa_hlte,$(TARGET_PRODUCT))
 
-ifeq (pa_jflteatt,$(TARGET_PRODUCT))
+# Define PA bootanimation size
+PARANOID_BOOTANIMATION_NAME := XHDPI
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := pa_xxhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -29,14 +31,13 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/jflteatt/full_jflteatt.mk)
+$(call inherit-product, device/samsung/hlte/full_hlte.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_jflteatt
-PRODUCT_DEVICE := jflteatt
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SGH-I337
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jflteuc TARGET_DEVICE=jflteatt BUILD_FINGERPRINT="samsung/jflteuc/jflteatt:4.2.2/JDQ39/I337UCUAMDL:user/release-keys" PRIVATE_BUILD_DESC="jflteuc-user 4.2.2 JDQ39 I337UCUAMDL release-keys"
-
+PRODUCT_NAME := pa_hlte
+PRODUCT_DEVICE := hlte
+PRODUCT_BRAND := Samsung
+PRODUCT_MODEL := SM-N9005
+PRODUCT_MANUFACTURER := Samsung
 endif
+
