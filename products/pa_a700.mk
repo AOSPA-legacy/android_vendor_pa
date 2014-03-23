@@ -28,7 +28,7 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit AOSP device configuration
-$(call inherit-product, device/acer/a510/full_a700.mk)
+$(call inherit-product, device/acer/a700/full_a700.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := pa_a700
