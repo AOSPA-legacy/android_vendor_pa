@@ -33,3 +33,4 @@ add_lunch_combo pa_togari-userdebug
 add_lunch_combo pa_v500-userdebug
 add_lunch_combo pa_vs980-userdebug
 add_lunch_combo pa_yuga-userdebug
+add_lunch_combo pa_meliusltexx-userdebug
