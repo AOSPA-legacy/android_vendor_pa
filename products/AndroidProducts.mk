@@ -129,6 +129,3 @@ endif
 ifeq (pa_tate,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_tate.mk
 endif
-ifeq (pa_jem,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jem.mk
-endif
