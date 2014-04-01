@@ -39,8 +39,7 @@ PRODUCT_COPY_FILES += \
     vendor/$(VENDOR)/prebuilt/bin/su:system/xbin/daemonsu \
     vendor/$(VENDOR)/prebuilt/bin/su:system/xbin/su \
     vendor/$(VENDOR)/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/$(VENDOR)/prebuilt/apk/Superuser.apk:system/app/Superuser.apk \
-    vendor/$(VENDOR)/prebuilt/apk/DoubleWake.apk:system/app/DoubleWake.apk
+    vendor/$(VENDOR)/prebuilt/apk/Superuser.apk:system/app/Superuser.apk
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
