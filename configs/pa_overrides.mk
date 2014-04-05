@@ -36,10 +36,17 @@ PRODUCT_PACKAGES += \
 #        ParanoidPreferences
 #endif
 
+# Include ParanoidOTA
+ifneq ($(NO_OTA_BUILD),true)
+    PRODUCT_PACKAGES += \
+        ParanoidOTA
+endif
+
 # CrystalPA
 PRODUCT_PACKAGES += \
     Trebuchet \
-    Apollo
+    Apollo \
+    CMFileManager
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
