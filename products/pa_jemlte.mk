@@ -21,6 +21,9 @@ OVERLAY_TARGET := pa_tvdpi
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
+# Inherit telephony common stuff
+$(call inherit-product, vendor/pa/configs/telephony.mk)
+
 # Include ParanoidAndroid common configuration
 include vendor/pa/main.mk
 
