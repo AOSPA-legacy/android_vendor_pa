@@ -27,6 +27,10 @@ PRODUCT_PACKAGES += \
     ScreenRecorder \
     libscreenrecorder
 
+#CyanogenMod Packages
+PRODUCT_PACKAGES += \
+    VoicePlus
+
 # Source or prebuilt PA-prefs logic
 #ifneq ($(PREFS_FROM_SOURCE),true)
 #    PRODUCT_COPY_FILES += \
