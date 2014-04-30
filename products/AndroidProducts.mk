@@ -21,3 +21,6 @@ endif
 ifeq (pa_p705,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p705.mk
 endif
+ifeq (pa_huashan,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_huashan.mk
+endif

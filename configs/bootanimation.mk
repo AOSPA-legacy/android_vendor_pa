@@ -15,6 +15,11 @@
 
 # Add PA bootanimation based on xxhdpi xhdpi hdpi tvdpi resolution
 
+# PA XHDPI Devices
+ifneq ($(filter cpa_huashan,$(TARGET_PRODUCT)),)
+    PRODUCT_COPY_FILES += \
+        vendor/pa/prebuilt/bootanimation/1280x720.zip:system/media/bootanimation.zip
+endif
 
 # PA HDPI Devices
 ifneq ($(filter pa_e610 pa_p700 pa_705,$(TARGET_PRODUCT)),)
