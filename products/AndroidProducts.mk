@@ -153,6 +153,12 @@ endif
 ifeq (pa_odin,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_odin.mk
 endif
+ifeq (pa_p3100,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p3100.mk
+endif
+ifeq (pa_p3110,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p3110.mk
+endif
 ifeq (pa_p880,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p880.mk
 endif
