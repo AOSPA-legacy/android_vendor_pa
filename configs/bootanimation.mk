@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-# Add PA bootanimation based on xxhdpi xhdpi hdpi tvdpi resolution
-
 # PA XHDPI Devices
 ifneq ($(filter cpa_huashan,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
