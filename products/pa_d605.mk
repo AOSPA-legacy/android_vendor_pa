@@ -14,25 +14,25 @@
 
 # Check for target product
 
-ifeq (cpa_d605,$(TARGET_PRODUCT))
+ifeq (pa_d605,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := cpa_xhdpi
+OVERLAY_TARGET := pa_xhdpi
 
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/cpa/configs/telephony.mk)
+$(call inherit-product, vendor/pa/configs/telephony.mk)
 
-# Include CPA common configuration
-include vendor/cpa/main.mk
+# Include PA common configuration
+include vendor/pa/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/lge/d605/full_d605.mk)
 
 # Override AOSP build properties
 PRODUCT_DEVICE := d605
-PRODUCT_NAME := cpa_d605
+PRODUCT_NAME := pa_d605
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-D605
 PRODUCT_MANUFACTURER := LGE

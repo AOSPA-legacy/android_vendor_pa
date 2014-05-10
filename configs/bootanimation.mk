@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # PA XHDPI Devices
-ifneq ($(filter cpa_huashan cpa_d605,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_huashan pa_d605,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/1280x720.zip:system/media/bootanimation.zip
 endif
