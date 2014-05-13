@@ -3,4 +3,3 @@ add_lunch_combo pa_p700-userdebug
 add_lunch_combo pa_p705-userdebug
 add_lunch_combo pa_d605-userdebug
 add_lunch_combo pa_huashan-userdebug
-
