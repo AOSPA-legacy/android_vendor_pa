@@ -14,12 +14,11 @@
 
 # Check for target product
 
-ifeq (pa_d802,$(TARGET_PRODUCT))
+ifeq (pa_p700,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_g2
+OVERLAY_TARGET := pa_hdpi
 
-# Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
@@ -29,15 +28,17 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/lge/d802/d802.mk)
+$(call inherit-product, device/lge/p700/full_p700.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := d802
-PRODUCT_NAME := pa_d802
-PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG-D802
-PRODUCT_MANUFACTURER := lge
+PRODUCT_PACKAGES += Trebuchet
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=d802 BUILD_FINGERPRINT=lge/g2_open_com/g2:4.4.2/KOT49I.D80220a/D80220a.1392133741:user/release-keys PRIVATE_BUILD_DESC="g2_open_com-user 4.4.2 KOT49I.D80220a D80220a.1392133741 release-keys"
+# Override AOSP build properties
+PRODUCT_DEVICE := p700
+PRODUCT_NAME := pa_p700
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-P700
+PRODUCT_MANUFACTURER := LGE
+
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=u0_open_eu BUILD_FINGERPRINT=lge/u0_open_eu/u0:4.0.3/IML74K/lgp700-V10a.20120418.144808:user/release-keys PRIVATE_BUILD_DESC="u0_open_eu-user 4.0.3 IML74K lgp700-V10a.20120418.144808 release-keys"
 
 endif

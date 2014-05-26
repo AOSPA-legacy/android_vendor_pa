@@ -16,6 +16,10 @@ PRODUCT_PACKAGES += \
     Busybox \
     Lightbulb
 
+#CyanogenMod Packages
+PRODUCT_PACKAGES += \
+    VoicePlus
+
 # Source or prebuilt PA-prefs logic
 #ifneq ($(PREFS_FROM_SOURCE),true)
 #    PRODUCT_COPY_FILES += \
@@ -31,6 +35,12 @@ ifneq ($(NO_OTA_BUILD),true)
     PRODUCT_PACKAGES += \
         ParanoidOTA
 endif
+
+# CrystalPA
+PRODUCT_PACKAGES += \
+    Trebuchet \
+    Apollo \
+    CMFileManager
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \

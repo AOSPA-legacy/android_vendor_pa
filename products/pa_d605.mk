@@ -1,4 +1,4 @@
-# Copyright (C) 2014 ParanoidAndroid Project
+# Copyright (C) 2014 CrystalPA Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,31 +14,35 @@
 
 # Check for target product
 
-ifeq (pa_d2lte,$(TARGET_PRODUCT))
+ifeq (pa_d605,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
 
-# Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/pa/configs/telephony.mk)
 
-# Include AOSPA common configuration
+# Include PA common configuration
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/d2lte/full_d2lte.mk)
+$(call inherit-product, device/lge/d605/full_d605.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_d2lte
-PRODUCT_DEVICE := d2lte
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := d2lte
+PRODUCT_DEVICE := d605
+PRODUCT_NAME := pa_d605
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-D605
+PRODUCT_MANUFACTURER := LGE
 
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=d2lte TARGET_DEVICE=d2lte
-
+# override
+#PRODUCT_BUILD_PROP_OVERRIDES += \
+    #BUILD_NUMBER=144808 \
+    #PRODUCT_NAME=p705 \
+    #TARGET_BUILD_TYPE=user \
+    #BUILD_VERSION_TAGS=release-keys \
+    #PRIVATE_BUILD_DESC="p705-user 4.4.2 KVT49L 144808 release-keys" \
+    #BUILD_FINGERPRINT="lge/p705/4.4.2/KVT49L/144808:user/release-keys"
 endif

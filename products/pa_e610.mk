@@ -14,10 +14,10 @@
 
 # Check for target product
 
-ifeq (pa_nozomi,$(TARGET_PRODUCT))
+ifeq (pa_e610,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := pa_hdpi
 
 PREFS_FROM_SOURCE ?= false
 
@@ -28,14 +28,19 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/sony/nozomi/full_nozomi.mk)
+$(call inherit-product, device/lge/e610/full_e610.mk)
+
+PRODUCT_PACKAGES += Trebuchet
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_nozomi
-PRODUCT_DEVICE := nozomi
-PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia S
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=LT26i_1257-5499 PRODUCT_DEVICE=nozomi BUILD_FINGERPRINT=SEMC/LT26i_1257-5499/LT26i:4.0.4/6.1.A.2.50/zfd_zw:user/release-keys PRIVATE_BUILD_DESC="LT26i-user 4.0.4 6.1.A.2.50 zfd_zw test-keys"
+PRODUCT_DEVICE := e610
+PRODUCT_NAME := pa_e610
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-e610
+PRODUCT_MANUFACTURER := LGE
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=m4_open_eu \
+    BUILD_FINGERPRINT="lge/m4_open_eu/m4:4.1.2/JZO54K/E61020c-EUR-XX.1367460723:user/release-keys" \
+    PRIVATE_BUILD_DESC="m4_open_eu-user 4.1.2 JZO54K E61020c-EUR-XX.1367460723 release-keys"
 endif

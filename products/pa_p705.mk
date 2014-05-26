@@ -13,29 +13,32 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_flo,$(TARGET_PRODUCT))
+
+ifeq (pa_p705,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_flo
+OVERLAY_TARGET := pa_hdpi
 
-# Build paprefs from sources
-PREFS_FROM_SOURCE ?= true
+PREFS_FROM_SOURCE ?= false
 
-# Include ParanoidAndroid common configuration
+# Inherit telephony common stuff
+$(call inherit-product, vendor/pa/configs/telephony.mk)
+
+# Include AOSPA common configuration
 include vendor/pa/main.mk
 
-# Inherit AOSP device configuration
-$(call inherit-product, device/asus/flo/full_flo.mk)
+# Inherit device configuration
+$(call inherit-product, device/lge/p705/full_p705.mk)
 
-# Include ParanoidAndroid bootanimation
-PRODUCT_COPY_FILES += \
-        vendor/pa/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
+PRODUCT_PACKAGES += Trebuchet
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_flo
-PRODUCT_BRAND := Google
-PRODUCT_MODEL := Nexus 7
-PRODUCT_MANUFACTURER := Asus
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=razor BUILD_FINGERPRINT="google/razor/flo:4.4.2/KOT49H/937116:user/release-keys" PRIVATE_BUILD_DESC="razor-user 4.4 KOT49H 937116 release-keys"
+PRODUCT_DEVICE := p705
+PRODUCT_NAME := pa_p705
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-P705
+PRODUCT_MANUFACTURER := LGE
+
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=u0_open_eu BUILD_FINGERPRINT=lge/u0_open_eu/u0:4.0.3/IML74K/lgp700-V10a.20120418.144808:user/release-keys PRIVATE_BUILD_DESC="u0_open_eu-user 4.0.3 IML74K lgp700-V10a.20120418.144808 release-keys"
 
 endif
