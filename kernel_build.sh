@@ -7,7 +7,7 @@ echo -e '\0033\0143'
 clear
 
 # Get current path
-DIR=$(pwd)
+DIR="$(cd `dirname ${BASH_SOURCE[0]}`; pwd)"
 OUT="$(readlink $DIR/out)"
 [ -z "${OUT}" ] && OUT="${DIR}/out"
 DATE=$(date +"%Y%m%d")
