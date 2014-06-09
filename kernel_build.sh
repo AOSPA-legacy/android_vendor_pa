@@ -7,7 +7,7 @@ echo -e '\0033\0143'
 clear
 
 # Get current path
-DIR="$(cd `dirname $0`; pwd)"
+DIR=$(pwd)
 OUT="$(readlink $DIR/out)"
 [ -z "${OUT}" ] && OUT="${DIR}/out"
 DATE=$(date +"%Y%m%d")
