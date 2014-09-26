@@ -104,8 +104,8 @@ echo -e ""
 res2=$(date +%s.%N)
 echo -e "${bldgrn}Total time elapsed: ${txtrst}${grn}$(echo "($res2 - $res1) / 60"|bc ) minutes ($(echo "$res2 - $res1"|bc ) seconds)${txtrst}"
 
-if [ -f $DIR/out/target/product/$DEVICE/AOSPA-$DEVICE-kernel-signed.zip ]; then
-   mv $DIR/out/target/product/$DEVICE/AOSPA-$DEVICE-kernel-signed.zip $DIR/out/target/product/$DEVICE/AOSPA-$DEVICE-$VERSION-kernel-$DATE-signed.zip
+if [ -f $DIR/out/target/product/$DEVICE/PA-$DEVICE-kernel-signed.zip ]; then
+   mv $DIR/out/target/product/$DEVICE/PA-$DEVICE-kernel-signed.zip $DIR/out/target/product/$DEVICE/PA-$DEVICE-$VERSION-kernel-$DATE-signed.zip
 else
    echo "file does not exist or wrong directory located"
 fi
