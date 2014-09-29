@@ -29,7 +29,7 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/oppo/find7/full_find7.mk)
+$(call inherit-product, device/oppo/find7/device.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := pa_find7
