@@ -55,3 +55,4 @@ add_lunch_combo pa_umts_spyder-userdebug
 add_lunch_combo pa_ville-userdebug
 add_lunch_combo pa_vs980-userdebug
 add_lunch_combo pa_yuga-userdebug
+add_lunch_combo pa_endeavoru-userdebug
