@@ -66,15 +66,6 @@ endif
 ifeq (pa_find7u,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_find7u.mk
 endif
-ifeq (pa_galaxysmtd,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_galaxysmtd.mk
-endif
-ifeq (pa_gee,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_gee.mk
-endif
-ifeq (pa_geeb,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_geeb.mk
-endif
 ifeq (pa_hercules,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hercules.mk
 endif
@@ -83,12 +74,6 @@ ifeq (pa_hlte,$(TARGET_PRODUCT))
 endif
 ifeq (pa_honami,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_honami.mk
-endif
-ifeq (pa_i9100,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9100.mk
-endif
-ifeq (pa_i9100g,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9100g.mk
 endif
 ifeq (pa_i9300,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9300.mk
@@ -176,9 +161,6 @@ ifeq (pa_togari,$(TARGET_PRODUCT))
 endif
 ifeq (pa_umts_spyder,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_umts_spyder.mk
-endif
-ifeq (pa_ville,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ville.mk
 endif
 ifeq (pa_vs980,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_vs980.mk
