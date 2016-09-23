@@ -37,6 +37,11 @@ PRODUCT_COPY_FILES += \
 # SU Support
 SUPERUSER_EMBEDDED := true
 
+#Audio Files
+PRODUCT_COPY_FILES += \
+    vendor/$(VENDOR)/prebuilt/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/$(VENDOR)/prebuilt/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+
 PRODUCT_PACKAGES := \
     Superuser \
     su
